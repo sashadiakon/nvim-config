@@ -3,9 +3,9 @@ require("blink.cmp").setup {
     preset = "default",
 
     -- navigation
-    ["<Tab>"] = { "select_next", "fallback" },
+    ["<Tab>"] = { "select_and_accept", "fallback" },
     ["<S-Tab>"] = { "select_prev", "fallback" },
-    ["n"] = { "select_next", "fallback" },        -- ✅ next with 'n'
+    ["<C-N>"] = { "select_next", "fallback" },        -- ✅ next with 'n'
 
     -- accept
     -- ["<Enter>"] = { "select_and_accept", "fallback" },
