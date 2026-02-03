@@ -40,13 +40,13 @@ require('lazy').setup({
       "nvim-telescope/telescope-symbols.nvim",
     },
   },
-  {
-    "ibhagwan/fzf-lua",
-    config = function()
-      require("config.fzf-lua")
-    end,
-    event = "VeryLazy",
-  },
+  -- {
+  --   "ibhagwan/fzf-lua",
+  --   config = function()
+  --     require("config.fzf-lua")
+  --   end,
+  --   event = "VeryLazy",
+  -- },
   {
     "MeanderingProgrammer/render-markdown.nvim",
     main = "render-markdown",

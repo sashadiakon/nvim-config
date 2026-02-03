@@ -149,8 +149,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
       local servers = {
         -- clangd = {},
         gopls = {},
-        pyright = {},
-
+        basedpyright = require("lsp.servers.basedpyright"),
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
