@@ -5,7 +5,8 @@ require("blink.cmp").setup {
     -- navigation
     ["<Tab>"] = { "select_and_accept", "fallback" },
     ["<S-Tab>"] = { "select_prev", "fallback" },
-    ["<C-N>"] = { "select_next", "fallback" },        -- ✅ next with 'n'
+    ["<C-J>"] = { "select_next", "fallback" },        -- ✅ next with 'n'
+    ["<C-K>"] = { "select_prev", "fallback" },        -- ✅ next with 'n'
 
     -- accept
     -- ["<Enter>"] = { "select_and_accept", "fallback" },
@@ -42,9 +43,12 @@ require("blink.cmp").setup {
     },
     keymap = {
       -- ["<Enter>"] = { "select_and_accept", "fallback" },
-      ["<C-CR>"] = { "select_and_accept", "fallback" },
-      ["<Tab>"] = { "select_next", "fallback" },
-      ["n"] = { "select_next", "fallback" },      -- ✅ also in cmdline
+      -- ["<C-CR>"] = { "select_and_accept", "fallback" },
+    ["<Tab>"] = { "select_and_accept", "fallback" },
+    ["<S-Tab>"] = { "select_prev", "fallback" },
+    ["<C-J>"] = { "select_next", "fallback" },        -- ✅ next with 'n'
+    ["<C-K>"] = { "select_prev", "fallback" },        -- ✅ next with 'n'
+      -- ["n"] = { "select_next", "fallback" },      -- ✅ also in cmdline
     },
   },
 }
