@@ -40,3 +40,4 @@ vim.o.confirm = true
 
 vim.keymap.set('n', 'x', '"_x')
 vim.keymap.set('n', 'dw', '"_dw')
+

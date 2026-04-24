@@ -88,18 +88,14 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
       -- Enable the following language servers
       local servers = {
-        -- clangd = {},
         gopls = {},
-        basedpyright = require("lsp.servers.basedpyright"),
-        lua_ls = {
-          settings = {
-            Lua = {
-              completion = {
-                callSnippet = 'Replace',
-              },
-            },
-          },
-        },
+        basedpyright = require('lsp.basedpyright'),
+        -- ruff = {
+        --   settings = {
+        --     configuration = "~/.config/ruff.toml"
+        --   }
+        -- },
+        lua_ls = {},
       }
 
       local ensure_installed = vim.tbl_keys(servers or {})

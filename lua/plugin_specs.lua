@@ -18,10 +18,9 @@ require('lazy').setup({
       require("config.which-key")
     end,
   },
-  { -- Highlight, edit, and navigate code
+  { -- Highlight
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
-    -- main = 'nvim-treesitter.config', -- Sets main module to use for opts
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     opts = {
       ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', "go" },
@@ -40,13 +39,6 @@ require('lazy').setup({
       "nvim-telescope/telescope-symbols.nvim",
     },
   },
-  -- {
-  --   "ibhagwan/fzf-lua",
-  --   config = function()
-  --     require("config.fzf-lua")
-  --   end,
-  --   event = "VeryLazy",
-  -- },
   {
     "MeanderingProgrammer/render-markdown.nvim",
     main = "render-markdown",
@@ -91,7 +83,6 @@ require('lazy').setup({
   },
     {
     -- `lazydev` configures Lua LSP for your Neovim config, runtime and plugins
-    -- used for completion, annotations and signatures of Neovim apis
     'folke/lazydev.nvim',
     version = "1.*",
     ft = 'lua',
@@ -106,13 +97,11 @@ require('lazy').setup({
     -- Main LSP Configuration
    'neovim/nvim-lspconfig',
     dependencies = {
-      -- Automatically install LSPs and related tools to stdpath for Neovim
-      -- NOTE: `opts = {}` is the same as calling `require('mason').setup({})`
       { 'mason-org/mason.nvim', opts = {} },
       'mason-org/mason-lspconfig.nvim',
       'WhoIsSethDaniel/mason-tool-installer.nvim',
       -- Useful status updates for LSP.
-      { 'j-hui/fidget.nvim', opts = {} },
+      -- { 'j-hui/fidget.nvim', opts = {} },
     },
     config = function()
       require("config.mason")
