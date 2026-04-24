@@ -55,7 +55,7 @@ require('lazy').setup({
   },
    { "godlygeek/tabular", ft = { "markdown" } },
 
--- color scheme plugin  
+-- color scheme plugin
   { "marko-cerovac/material.nvim", lazy = true },
 
   {
@@ -107,12 +107,10 @@ require('lazy').setup({
    'neovim/nvim-lspconfig',
     dependencies = {
       -- Automatically install LSPs and related tools to stdpath for Neovim
-      -- Mason must be loaded before its dependents so we need to set it up here.
       -- NOTE: `opts = {}` is the same as calling `require('mason').setup({})`
       { 'mason-org/mason.nvim', opts = {} },
       'mason-org/mason-lspconfig.nvim',
       'WhoIsSethDaniel/mason-tool-installer.nvim',
-
       -- Useful status updates for LSP.
       { 'j-hui/fidget.nvim', opts = {} },
     },
@@ -130,15 +128,15 @@ require('lazy').setup({
 	vim.cmd [[silent! GoInstallDeps]]
      end,
   },
-  {
-  "ajbucci/ipynb.nvim",
-  dependencies = {
-    "nvim-treesitter/nvim-treesitter",
-    "neovim/nvim-lspconfig",
-    -- "nvim-tree/nvim-web-devicons", -- optional, for language icons
-    -- "folke/snacks.nvim", -- optional, for inline images
-  },
-  opts = {},
-}
+--   {
+--   "ajbucci/ipynb.nvim",
+--   dependencies = {
+--     "nvim-treesitter/nvim-treesitter",
+--     "neovim/nvim-lspconfig",
+--     -- "nvim-tree/nvim-web-devicons", -- optional, for language icons
+--     -- "folke/snacks.nvim", -- optional, for inline images
+--   },
+--   opts = {},
+-- }
 }
 )
