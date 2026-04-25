@@ -89,12 +89,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
       -- Enable the following language servers
       local servers = {
         gopls = {},
-        basedpyright = require('lsp.basedpyright'),
-        -- ruff = {
-        --   settings = {
-        --     configuration = "~/.config/ruff.toml"
-        --   }
-        -- },
+        -- basedpyright = require('lsp.basedpyright'),
+        ruff = require('lsp.ruff'),
+        ty = require('lsp.ty'),
         lua_ls = {},
       }
 
